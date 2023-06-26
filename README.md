@@ -4,6 +4,9 @@
 ### Step by Step Example
 
 ```r
+#install package
+remotes::install_github("dimshitc/phenotypeChangeVocab")
+
 library (dplyr)
 library (openxlsx)
 library (readr)
@@ -23,6 +26,7 @@ ROhdsiWebApi::authorizeWebApi(
 # also you can define the cohorts as vector directly:
 #cohorts <-c(12822, 12824, 12825)
 
+#you must specify the file location
 cohortsDF <- readr::read_delim("~/PhenotypeChangesInVocabUpdate/extras/Cohorts.csv", delim = "\t", show_col_types = FALSE)
 cohorts <-cohortsDF[[1]]
 
